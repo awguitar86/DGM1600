@@ -1,0 +1,39 @@
+I'm going to use what is in the C# Pocket Book for an example of code. They have:
+
+using System;
+
+class Test
+{
+  static void Main()
+  {
+    int x = 12 * 30;
+    Console.WriteLine (x);
+  }
+}
+
+ Ok, the semicolons are what terminates the statement. Without them C# will cry. 
+ The period, or dot operator, is used in between words and indentifiers. The indentifier before the period is the parent,
+ and the other identifiers after each period are children of the one before the period. For example, you can have:
+ 
+ Parent.ChildParent.ChildParent.ChildParent
+ 
+ In the code above, Console is the parent, WriteLine is the child to Console, and (x) is the child to WriteLine. 
+ 
+ Each on after the period is a child of the one before the period, but each on after the period is also a parent for the next
+ one after the next period, if that makes sense. 
+ 
+ Indenting is an important thing to do when coding. Allthough it is not required for the code, it is good to do so that 
+ when you go back to read the coe you can read it easily and see where section are and so forth. 
+ 
+ Comments are very usefull to use so that you can understand what you were doing when you go back and look at the code.
+ There are two different types of comments. Single line and Multi line comments. Single line comments are done by typing
+ two forward slashes like this // and then typing your comment. A multi line comment is done by first typeing a forward 
+ slash and then a star like this /*, writing out your comment, and then ending or closing your comment by typing first a
+ star and then a forward slash like this */.
+ 
+ Curly braces are used for groupd of statements. You always have to open and close curly braces. The code above has a few.
+ There is one below class Test that start the next group of code statments. And it is closed with the very last curly brace
+  on the bottom. Then within those curly braces there is another set of curly braces that start just below static void Main(),
+  and they end with the closing curly brace just under Console.WriteLine (x).
+ 
+ 
