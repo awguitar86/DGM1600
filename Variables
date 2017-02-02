@@ -1,0 +1,53 @@
+I am going to use the examples from what we did in class for explaining variables.
+In this first example, we added the Data Type float and the variable rotX, rotY, rotZ
+and had each of them set to a certain whole number. Because of this we can now change
+the numbers after the variable Vector3 to these three variables. Now when we want to
+the numbers we can easily go in and just change the number on one or all of those rot 
+variables and it will change it for each time we use that variable in all of the code. 
+
+      public class Rotate : MonoBehaviour {
+        public float speed;
+        public float rotX = 15;
+        public float rotY = 30;
+        public float rotZ = 45;
+
+        // Use this for initialization
+        void Start () {
+          speed = Random.Range (.5f, 2.0f);
+
+        }
+
+        // Update is called once per frame
+        void Update () {
+          transform.Rotate (new Vector3 (rotX, rotY, rotZ) * Time.deltaTime * speed);
+        }
+      }
+
+Similarly in this other set of code we did in class, we added the float Data Type
+and then a horizontalSpeed and verticalSpeed variable. Then we went and changed 
+the numbers in each statement to the variable. Because there are positive and 
+negative numbers in these statements we have to keep the negative in fron of the 
+variables that need it. But this is helpfull because now instead of going and 
+changing every number in the statement, we just have to go to the variable and 
+change the number there, which in turn will change it in the statement. 
+
+      public class Move : MonoBehaviour {
+        public float horizontalSpeed = .5f;
+        public float verticalSpeed = .2f;
+
+        // Update is called once per frame
+        void Update () {
+          if (Input.GetKey (KeyCode.LeftArrow)) {
+            gameObject.transform.Translate (-horizontalSpeed, 0, 0);
+          }
+          if (Input.GetKey (KeyCode.RightArrow)) {
+            gameObject.transform.Translate (horizontalSpeed, 0, 0);
+          }
+          if (Input.GetKey (KeyCode.UpArrow)) {
+            gameObject.transform.Translate (0, verticalSpeed, 0);
+          }
+          if (Input.GetKey (KeyCode.DownArrow)) {
+            gameObject.transform.Translate (0, -verticalSpeed, 0);
+          }
+        }
+      }
