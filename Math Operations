@@ -1,0 +1,60 @@
+The math operations are fairly easy to underdtand for myself. It's basically math equations and the data for the equations are
+assigned to variables and certain data types depending on the number. Then the variables are put into place for the numbers in 
+the equation. By doing this the variables can be used in multiple equations and operations. 
+
+I've copied the code I wrote for the assignment here as a reference. Starting with the variables I created, the float data type
+is used for pi and radius because they are both decimals. Then I used the int data type for the other variable, because they
+are all whole numbers. 
+
+The statements are each an equation written out using the variables in place of the numbers, because the variables have been
+assigned the numbers which make them the same as the numbers. On some of the equations, like on finding the area of a circle,
+the radius was squared. I didn't know how to square something in code. So, I put the radius times itself inside parenthesis 
+which makes it solved first before multiplying by pi. 
+
+The print value is used to spit out the answer of the equation in the console. In the print value I said what the answer to the
+equation was with the variable of each equation. For example, "The diamter of the circle with radius " +radius " is " + diamter);
+
+
+
+public class variablesandoperators : MonoBehaviour {
+	private float pi = 3.1415f;
+	private float radius = 4.7f;
+	private int length = 50;
+	private int width = 375;
+	private int triBase = 498;
+	private int height = 274;
+
+	// Use this for initialization
+	void Start () {
+		//Find the diameter of a circle
+		float diameter = 2 * radius;
+		print ("The diameter of the circle with radius " +radius + " is " + diameter);
+
+		//Find the Circumference of a circle
+		float circumference = 2 * pi * radius;
+		print ("The circumference of the circle with radius " + radius + " is " + circumference);
+
+		//Find the Area of a circle
+		float area = pi * (radius * radius);
+		print ("The area of the circle with radius " + radius + " is " + area);
+
+		//Find the volume of a sphere
+		float volume = 4 / 3 * pi * (radius * radius * radius);
+		print ("The volume of the sphere with radius " + radius + " is " + volume);
+
+		//Find the perimeter of a rectangle
+		int perimeter = 2 * (length + width);
+		print ("The perimeter of the rectangle with length " + length + " and width " + width + " is " + perimeter);
+
+		//Find the area of a rectangle
+		int recArea = length * width;
+		print ("The area of the rectangle with the length " + length + " and width " + width + " is " + recArea);
+
+		//Find the area of a triangle
+		int triArea = (triBase * height) / 2;
+		print ("The area of the triangle with the base " + triBase + " and height " + height + " is " + triArea);
+			
+	}
+}
+
+
