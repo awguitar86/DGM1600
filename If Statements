@@ -1,0 +1,72 @@
+If statements are used to make decisions in code. First you set the variables with a data type and give it some data whether
+it's a number or a word. Then in the code you can write if statements. If statements use relational operators. These are:
+== is equal to
+!= is not equal to
+> is greater than
+< is less than
+>= is greater than or equal to
+<= is less than or equal to
+Here is an example of how to use these. 
+Below is the code I wrote up for this assignment. I set income to 583.75 as a float value. And I set newcomputer to 1000 as
+an integer value. In the code I wrote four if statements for income and newcomputer. I wrote an equal to if statement, and 
+if it is true it will print out "Go ahead and buy it". If it is not true it will skip to the next line of code which is a 
+not equal to if statement. If that if statement is true then it will print out "Sorry, no can buy." And it will keep going
+the code going over each if statement and printing out what it says or going to the next line. 
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class IfStatement : MonoBehaviour {
+	private float income = 583.75f;
+	private int newcomputer = 1000;
+	private int freezing = 32;
+	private int outside = 32; 
+	private string weather = "Cold";
+	private bool awesome = true;
+	// Use this for initialization
+	void Start () {
+		if (income == newcomputer) 
+		{
+			print (" Go ahead and buy it! ");
+		}
+		if (income != newcomputer) 
+		{
+			print (" Sorry, no can buy. ");
+		}
+		if (income < newcomputer)
+		{
+			print (" Stop being lazy and go earn some money! ");
+		}
+		if (income > newcomputer) 
+		{
+			print (" Good Job! Go get your new toy! ");
+		}
+		if (outside <= freezing)
+		{
+			print (" Welp, looks like I'm going to freeze my butt off today ");
+		}
+		if (outside >= freezing)
+		{
+			print (" Hey, today actually might be somewhat warm! ");
+		}
+		if (weather != "Cold") 
+		{
+			print (" Doesn't look like you have to wear a jacket today! ");
+		}
+		if (weather == "Cold") 
+		{
+			print (" Yeah, your going to have to wear a jacket and a beanie today. ");
+		}
+		if (awesome == true)
+		{
+			print (" Yeah you are awesome!! ");
+			awesome = false;
+		}
+		if (awesome == false)
+		{
+			print (" Stay in bed all day and binge watch Netflix. ");
+		}
+	}
+}
