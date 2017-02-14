@@ -1,0 +1,71 @@
+Else clauses help to be more specific in if statements. Instead of having a bunch of if statements with many of them that 
+run, you can use else and else-if statments to be more specific and only run one block of code. 
+
+For example, in this line of code instead of doing two if statements and having it print wake up and go to sleep right after,
+it will now only print one of them because of the else clause. These lines of code with print Wake Up because awake is set
+to false. 
+
+private bool awake = false;
+
+    if (awake == false) 
+		{
+			print ("WAKE UP!");
+			awake = true;
+		} 
+
+		else 
+		{
+			print ("Go to sleep");
+		}
+    
+An example of using else-if statements is these line of code. Else-if statments can be used to help narrow down even more of
+a decision with a condition. These lines of code are saying if the time is less than 12 then print good morning. If it is 
+equal to then print Lunch Time. If it is less than 18 then print Good afternoon. And if it is none of those then run Good
+Evening. The else clause is always the very last in the lines of code, and there can only be one. The there can be lots of 
+else-if statements if need be.
+
+private int time = 14;
+
+    if (time < 12) 
+    {
+			print ("Good Morning!");
+		} 
+		else if (time == 12) 
+    {
+			print ("Lunch Time");
+		} 
+		else if (time < 18) 
+		{
+			print ("Good Afternoon!");
+		}
+		else 
+		{
+			print ("Good Evening");
+		}
+
+Here is another example of else-if statements. The grade is set to 87. So if the grade is greater than 90 it prints out A.
+And then it says if it is not greater than 90 then go onto the next line of code which says if the grade is greater than 
+80 then print out a B. And there can be multiple else-if statements for each grade. 
+
+private float grade = 87;
+    if (grade > 90) 
+    {
+			print ("A");
+		} 
+    else if (grade > 80) 
+		{
+			print ("B");	
+		}
+    
+Another example of the else clause is this line of code. It won't print both statements, because of the else clause. 
+
+private float tempurature = 50;
+
+     if (temperature > 50)
+     {
+        print ("It's going ot be very nice today!");
+     }
+     else
+     {
+        print ("It might be a bit chilly today. Where a jacket.");
+     }
