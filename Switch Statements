@@ -1,0 +1,155 @@
+If and if/else statments are similar to switches, but there is a difference. Switches only use equal to. They don't do greater
+than or less than. If/else statements do the greater than and less than stuff, because they have multiple decisions to 
+be made. Switches are equal to one thing at a time, depending on what the variables are assigned to. For example, in the code
+below, the temperature variable is assigned to 40 degrees. Then below in the code there are different temperature cases,
+and if the temperature is set to any of those it will print out the phrase for tht temperature. If not it will go right to the
+default and print out that phrase. Between each statement there has to be a break so that it will break out of that statement
+and go onto the next statement. Switches are sometimes more usful and easier to read than if/else statements because of how 
+simple they are.
+
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class switchstate : MonoBehaviour {
+	private int tempurature = 40;
+
+	private string snowDepth = "ten feet";
+
+	private string kid = "2 year old";
+	private string phrase;
+	private bool age = true;
+
+	private int money = 50000;
+
+	private string movie = "Lord of The Rings: The Two Towers";
+	private string quote;
+	private bool inStock = true;
+
+
+	// Use this for initialization
+	void Start () {
+		switch (tempurature) 
+		{
+		case 100:
+			print ("It is so freakin hot outside!");
+			break;
+		case 90:
+			print ("It is still pretty hot outside. Keep that AC running.");
+			break;
+		case 80:
+			print ("Hey, it's pretty nice outside! Just a little hot, but not to bad.");
+			break;
+		case 70:
+			print ("Wow! It is amazing outside today! I am for sure going on a good long hike.");
+			break;
+		case 60:
+			print ("It is really nice outside! I think I shall go for a nice stroll in the park!");
+			break;
+		default:
+			print ("I AM SICK OF THE STUPID COLD!!!!!");
+			break;
+		}
+
+		switch (snowDepth)
+		{
+		case "ten feet":
+			print ("Yeah buddy! We've got tons of snow for a good snowboarding sesh!");
+			break;
+		case "eight feet":
+			print ("Oh, we've got a good amount of snow for boarding today. But it would be nice ot have more.");
+			break;
+		case "four feet":
+			print ("It might be a little scetchy on some parts of the mountain. I Don't want to scuff up my board.");
+			break;
+		default:
+			print ("The snow this year sucks. Just go home.");
+			break;
+		}
+
+		switch (kid) 
+		{
+		case "newborn":
+			phrase = "WAAA!! WAAA!!!";
+			break;
+		case "4 month old":
+			phrase = "goo goo bla bla shoogda aaah";
+			break;
+		case "1 year old":
+			phrase = "dada. mama. Hi! Bye!";
+			break;
+		case "2 year old":
+			phrase = "NO! Mine. MINE!";
+			break;
+		case "3 year old":
+			phrase = "I don't like that. No, please.";
+			break;
+		case "5 year old":
+			phrase = "My dad is stronger than your dad.";
+			break;
+		case "teenager":
+			phrase = "chomp chomp chomp. zzzzzzzzzzzzzzzzzzzzz. chomp chomp chomp. zzzzzzzzzzzzzzzz.";
+			break;
+		default:
+			age = false;
+			break;
+		}
+
+		if (age == true)
+		{
+			print (" A " + kid + " says \"" + phrase + "\" . ");
+		}
+		else
+		{
+			print (kid + " is now a grown boring adult. ");
+		}
+
+		switch (money)
+		{
+		case 1000000:
+			print("I am filthy rich!!");
+			break;
+		case 200000:
+			print ("I am makin some pretty dang good money!");
+			break;
+		case 50000:
+			print ("Hey look, my paycheck is already gone and I haven't even got it yet.");
+			break;
+		case 30000:
+			print ("Honey, we're having ramen noodles for dinner again.");
+			break;
+		default:
+			print ("Yep, I am a full-time student. Bring on those student loans!");
+			break;
+		}
+
+		switch (movie) 
+		{
+		case "Star Wars: Return of The Jedi":
+			quote = "Never. I'll never turn to the Dark Side. You've failed, your highness. I am a Jedi, like my father before me.";
+			break;
+		case "Lord of The Rings: The Two Towers":
+			quote = "What's taters, precious? What's taters, eh?";
+			break;
+		case "Dumb and Dumber":
+			quote = "Man, you are one pathetic loser. No offense.";
+			break;
+		case "The Avengers":
+			quote = "Have you ever tried shawarma? There's a shawarma joint about two blocks from here. I don't know what it is, but I wanna try it.";
+			break;
+		default:
+			inStock = false;
+			break;
+		}
+
+		if (inStock == true)
+		{
+			print (" A great line from " + movie + " is \"" + quote + "\" . ");
+		}
+		else
+		{
+			print (" Go find a great line from " + movie + " yourself. ");
+		}
+	}
+}
