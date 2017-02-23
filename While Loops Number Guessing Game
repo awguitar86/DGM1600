@@ -1,0 +1,39 @@
+This was a challenge for me, but with the help of a classmate and my dad I was able to figure it out. I still don't fully 
+understand why and how this works, but it works!
+
+  
+public class whileloop : MonoBehaviour {
+private int lowNum = 1;
+private int highNum = 100;
+private int randomNum;
+private int counter = 0;
+private int target = 77;
+
+// Use this for initialization
+void Start ()
+{
+	while (randomNum != target) 
+	{
+		randomNum = Random.Range (lowNum, highNum);
+
+		if (randomNum > 77) 
+		{
+			highNum = randomNum;
+		} 
+		else if (randomNum < 77) 
+		{
+			lowNum = randomNum;
+		}
+
+		counter++;
+
+		if (randomNum == target) 
+		{
+			print ("Attempt " + counter + ": Congratulations! " + randomNum + " is the right number! ");
+			break;
+		} 
+		else
+			print ("Attempt " + counter + ": Sorry " + randomNum + " is not the right number. ");
+	}
+}
+}
