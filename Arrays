@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class arrays : MonoBehaviour {
+	private string [ ] verb1 = new string [5] {"rain", "snow", "hail", "dump", "pour"};
+	private string [ ] adj1 = new string [5] { "slippery", "icey", "wet", "flooded", "nasty"};
+	private string [ ] verb2 = new string[5] {"sliding", "falling", "flying", "swerving", "flipping"};
+	private string [ ] adj2 = new string [5] { "stupid", "funny", "idiot", "terrible", "crazy"};
+	private string [ ] verb3 = new string[5] {"move", "dance", "fly", "drive", "roll"};
+	private string [ ] veh1 = new string[5] {"mustangs", "monster trucks", "mini vans", "bugs", "tricycles"};
+	private string [ ] adj3 = new string [5] { "freezing", "relaxing", "painful", "cutting", "boisterous"};
+	private string [ ] verb4 = new string[5] {"froze", "danced", "fell", "walked", "cried"};
+	private string [ ] verb5 = new string[5] {"got lost", "ran", "slept", "died", "panicked"};
+	private string [ ] veh2 = new string[5] {"rocket ships", "jets", "motor cycles", "four wheelers", "speed boats"};
+		
+
+	// Use this for initialization
+	void Start () {
+		
+		print ("When it started to " + verb1 [Random.Range (0, verb1.Length)] + ", the streets got " +
+			"really " + adj1 [Random.Range (0, adj1.Length)] + ". Cars were " + verb2 [Random.Range (0, verb2.Length)] + " off the road " +
+			"left and right. The freeway was backed up for miles from " + adj2 [Random.Range (0, adj2.Length)] + " drivers. " +
+			"Then everything froze solid. The cars and trucks couldn’t even " + verb3 [Random.Range (0, verb3.Length)] + ". Everyone " +
+			"had to get out of their " + veh1 [Random.Range (0, veh1.Length)] + " and walk home " +
+			"in the " + adj3 [Random.Range (0, adj3.Length)] + " blizzard. Some people " + verb4 [Random.Range (0, verb4.Length)] + " on " +
+			"their way home, and some people " + verb5 [Random.Range (0, verb5.Length)] + ". It took " +
+			"a whole month for the snow to melt before anyone could drive their " + veh2 [Random.Range (0, veh2.Length)] + " home."); 
+	}
+}
