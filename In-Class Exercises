@@ -1,0 +1,81 @@
+public class brainexercises : MonoBehaviour {
+
+	private string [ ] names = new string [5] {"Mike", "Nate", "Kim", "Caroline", "Tim"};
+	private string [ ] colors = new string [5] {"blue", "red", "yellow", "black", "green"};
+	private int lowNum = 1;
+	private int highNum = 100;
+	private int randomNum;
+	private int counter = 0;
+	public List<int> numList = new List<int>();
+
+	// Use this for initialization
+	void Start ()
+	{
+		//Create 2 arrays, one with 5 names and one with 5 colors and create a sentance with them.
+		print (names [3] + " loves when the sky is a deep " + colors [0] + ".");
+	}
+
+	//Create a function that requires 3 float values as input, then multiplies them together and prints the result.
+	private void Multiply(float A, float B, float C)
+	{
+
+		print (A * B * C);
+
+	}
+
+	//Create a function that generates random numbers and adds them to a list. The number of elements in the list is determined by an argument when the function is called.  Return the list.
+	public void AddRandomNum ()
+	{
+			randomNum = Random.Range (lowNum, highNum);
+
+			numList.Add (randomNum);
+
+			counter++;
+
+		if (counter == 10) 
+		{
+			int i = 0;
+			while(i < numList.Count)
+			{
+				print (numList[i]);
+				i++;
+			}
+		}
+	}
+
+
+	//Create a function with string parameter that converts string to a float (assuming the string argument on contains numeric characters) and returns the new float value.
+
+
+
+	//Create a function with 2 float parameters that adds the values together and returns the result.
+	private void Add (float A, float B)
+	{
+		print (A + B);
+	}
+
+
+	//Create a function with a float parameter and print its multiplication table from 0-12. For example, if the input was 6, the output would be: 6 * 0 = 0,  6 * 1 = 6,  6 * 2 = 12
+
+
+	 
+	/* Create a function that generates random float numbers based on 3 parameters that define (1) the minimum range, (2) the maximum range, and (3) the number of values to generate. 
+	 * Add each element to a list and retunr it. (Hint: You can reuse this function in further exercises.)*/
+
+
+
+	/* Create a function that generates 100 random values that seperates out all items that are divisible by 3 and adds them to an array. Sort the array from lowest to highest value
+	(Hint: There is a method already in place for this. Go find it!) Print the items in the array.*/
+
+
+
+	/* Use the internet to learn how to use input fields in Unity and C#. Create a new scene with 2 input fields. As an example, they could request a user's name and age.
+	Create a function that extracts the text from the input fields and prints a statment using the data (ex: "David is 25 years old.") */
+
+
+
+	/* Create a function that generates 100 random values between 0-100. Use a switch statment to determine if the value is between 0-10, 10-20, 20-30, etc. and track each group.
+		Once all values have been processed, print a statment indicating which group has the most items. (A real-world example of this might be sampling a random group of 100 people
+			and finding which age group is most prevalent.)*/
+
+}
