@@ -1,0 +1,47 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CalculatorGame : MonoBehaviour {
+	
+	public InputField leftInput;
+	public InputField rightInput;
+	public Text result;
+	public InputField dropNum;
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+
+	public void Add ( ){
+		float addNum;
+		addNum = float.Parse (leftInput.text) + float.Parse (rightInput.text);
+		result.text = addNum.ToString ();
+	}
+
+	public void Subtract (){
+		float subtractNum;
+		subtractNum = float.Parse (leftInput.text) - float.Parse (rightInput.text);
+		result.text = subtractNum.ToString ();
+	}
+
+	public void Multiply (){
+		float multiplyNum;
+		multiplyNum = float.Parse (leftInput.text) * float.Parse (rightInput.text);
+		result.text = multiplyNum.ToString ();
+	}
+
+	public void Divide (){
+		float divideNum;
+		divideNum = float.Parse (leftInput.text) / float.Parse (rightInput.text);
+		result.text = divideNum.ToString ();
+	}
+
+
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}
